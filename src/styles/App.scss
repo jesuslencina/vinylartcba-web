@@ -1,0 +1,10 @@
+@use "./variables" as vars;
+
+@import url("https://fonts.googleapis.com/css2?family=Podkova:wght@400;800&display=swap");
+
+body {
+    margin: 0;
+    font-family: "Podkova", serif;
+    color: vars.$dark;
+    min-height: 100vh;
+}

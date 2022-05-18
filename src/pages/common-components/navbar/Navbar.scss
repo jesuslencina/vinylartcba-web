@@ -1,0 +1,68 @@
+@use "/src/styles/variables" as vars;
+@use "/src/styles/mixins.scss" as mixs;
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 calc(vars.$mobile-padding-x / 2);
+
+    .logo-container {
+        display: flex;
+        align-items: center;
+
+        p {
+            margin-left: 0.5rem;
+            font-size: 1.25rem;
+        }
+    }
+
+    .nav-items {
+        display: none;
+
+        &.active {
+            position: fixed;
+            left: 0;
+
+            width: 100%;
+            padding-left: 0;
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+
+            li {
+                background-color: vars.$dark;
+                padding: 1rem;
+
+                a {
+                    color: vars.$light;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: vars.$breakpoint-desktop) {
+        .burger-menu {
+            display: none;
+        }
+
+        .nav-items {
+            all: unset;
+
+            list-style: none;
+            display: flex;
+
+            li {
+                margin: 1rem;
+
+                a {
+                    color: vars.$dark;
+                    text-decoration: none;
+
+                    @include mixs.hoverable-link;
+                }
+            }
+        }
+    }
+}
