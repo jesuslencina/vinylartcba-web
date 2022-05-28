@@ -3,26 +3,57 @@
 .landing {
     @include mixins.apply-padding;
 
-    height: 90vh;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
 
-    .text {
-        width: 90%;
+    .hero {
+        position: relative;
+        height: 90vh;
 
-        margin-bottom: 30vh;
-        h1 {
-            margin: 2rem 0 0;
+        .text {
+            margin-top: 50%;
+            width: 90%;
+
+            h1 {
+                margin: 2rem 0 0;
+            }
+
+            p {
+                margin: 2rem 0;
+            }
+
+            .btn {
+                margin-top: 5rem;
+            }
         }
 
-        p {
-            margin: 2rem 0;
-        }
+        .cuadros {
+            position: absolute;
 
-        .btn {
-            margin-top: 5rem;
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas:
+                "montero happier"
+                "montero snowchild";
+
+            bottom: -25px;
+            left: 30%;
+            transform: rotate(-27deg);
+
+            .montero {
+                grid-area: montero;
+            }
+
+            .happier {
+                grid-area: happier;
+            }
+
+            .snowchild {
+                grid-area: snowchild;
+            }
         }
     }
 }
