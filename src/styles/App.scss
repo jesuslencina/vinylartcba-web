@@ -5,6 +5,11 @@
 body {
     margin: 0;
     font-family: "Podkova", serif;
+    font-weight: 18px;
     color: vars.$dark;
     min-height: 100vh;
+
+    @media screen and (min-width: vars.$breakpoint-desktop) {
+        font-size: 20px;
+    }
 }

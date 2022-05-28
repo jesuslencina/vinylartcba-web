@@ -20,7 +20,7 @@
     .nav-items {
         display: none;
 
-        &.active {
+        &.mobile {
             position: fixed;
             left: 0;
 
@@ -43,6 +43,10 @@
     }
 
     @media screen and (min-width: vars.$breakpoint-desktop) {
+        p {
+            font-size: 1.5rem;
+        }
+
         .burger-menu {
             display: none;
         }

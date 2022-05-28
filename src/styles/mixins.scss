@@ -1,6 +1,8 @@
 @use "./variables" as vars;
 
 @mixin hoverable-link {
+    transition: all 0.2s ease-in-out;
+
     &:hover {
         color: vars.$pinkish;
         text-decoration: underline;
