@@ -44,6 +44,8 @@
     }
 
     @media screen and (min-width: vars.$breakpoint-desktop) {
+        padding: 2vh calc(vars.$desktop-padding-x / 2);
+
         p {
             font-size: 1.5rem;
         }
@@ -64,6 +66,7 @@
                 a {
                     color: vars.$dark;
                     text-decoration: none;
+                    font-size: 22px;
 
                     @include mixs.hoverable-link;
                 }

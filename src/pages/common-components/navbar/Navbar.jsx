@@ -116,7 +116,7 @@ const Navbar = () => {
                         animate="animate"
                         exit={{ y: "100vw" }}
                         transition={{
-                            delay: 3,
+                            delay: 2,
                             duration: 0.5,
                         }}>
                         <NavLink to="/sobre-nosotros">SOBRE NOSOTROS</NavLink>
@@ -127,7 +127,7 @@ const Navbar = () => {
                         animate="animate"
                         exit={{ y: "100vw" }}
                         transition={{
-                            delay: 3.25,
+                            delay: 2.25,
                             duration: 0.5,
                         }}>
                         <NavLink to="/disenos">DISEÑOS</NavLink>
@@ -138,7 +138,7 @@ const Navbar = () => {
                         animate="animate"
                         exit={{ y: "100vw" }}
                         transition={{
-                            delay: 3.5,
+                            delay: 2.5,
                             duration: 0.5,
                         }}>
                         <a href={URL_INSTAGRAM} target="_blank">

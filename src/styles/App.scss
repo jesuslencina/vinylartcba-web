@@ -11,7 +11,7 @@ body {
     color: vars.$dark;
     min-height: 100vh;
 
-    @media screen and (min-width: vars.$breakpoint-desktop) {
-        font-size: 20px;
+    @media screen and (min-width: vars.$breakpoint-tablet) {
+        font-size: 1.5rem;
     }
 }

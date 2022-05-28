@@ -12,4 +12,9 @@
 @mixin apply-padding {
     padding-left: vars.$mobile-padding-x;
     padding-right: vars.$mobile-padding-x;
+
+    @media screen and (min-width: vars.$breakpoint-desktop) {
+        padding-left: vars.$desktop-padding-x;
+        padding-right: vars.$desktop-padding-x;
+    }
 }
