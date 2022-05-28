@@ -1,0 +1,7 @@
+@use "./variables" as vars;
+
+.btn {
+    background-color: vars.$dark;
+    color: white;
+    padding: 0.5rem 2rem;
+}

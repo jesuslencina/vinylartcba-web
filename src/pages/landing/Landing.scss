@@ -1,0 +1,28 @@
+@use "../../styles/mixins.scss" as mixins;
+
+.landing {
+    @include mixins.apply-padding;
+
+    height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .text {
+        width: 90%;
+
+        margin-bottom: 30vh;
+        h1 {
+            margin: 2rem 0 0;
+        }
+
+        p {
+            margin: 2rem 0;
+        }
+
+        .btn {
+            margin-top: 5rem;
+        }
+    }
+}

@@ -21,6 +21,7 @@
         display: none;
 
         &.mobile {
+            overflow-x: hidden;
             position: fixed;
             left: 0;
 

@@ -28,7 +28,7 @@ const Navbar = () => {
             variants={navbarVariants}
             initial="initial"
             animate="animate"
-            transition={{ delay: 0.25, duration: 1.75 }}>
+            transition={{ delay: 0.1, duration: 1.75 }}>
             <div className="logo-container">
                 <motion.img
                     src={logo}
@@ -38,13 +38,13 @@ const Navbar = () => {
                     variants={navbarVariants}
                     initial="initial"
                     animate="animate"
-                    transition={{ delay: 1, duration: 1.75 }}
+                    transition={{ delay: 0.2, duration: 1.75 }}
                 />
                 <motion.p
                     variants={navbarVariants}
                     initial="initial"
                     animate="animate"
-                    transition={{ delay: 1.25, duration: 1.75 }}>
+                    transition={{ delay: 0.4, duration: 1.75 }}>
                     VINYLARTCBA
                 </motion.p>
             </div>
@@ -60,7 +60,7 @@ const Navbar = () => {
                     variants={navbarVariants}
                     initial="initial"
                     animate="animate"
-                    transition={{ delay: 1.5, duration: 1.75 }}
+                    transition={{ delay: 0.7, duration: 1.75 }}
                 />
 
                 {/* MOBILE */}

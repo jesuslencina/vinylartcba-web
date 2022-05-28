@@ -8,3 +8,8 @@
         text-decoration: underline;
     }
 }
+
+@mixin apply-padding {
+    padding-left: vars.$mobile-padding-x;
+    padding-right: vars.$mobile-padding-x;
+}
