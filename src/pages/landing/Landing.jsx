@@ -10,7 +10,7 @@ const Landing = () => {
     return (
         <main className="landing">
             {/* HERO */}
-            <div className="hero">
+            <section className="hero">
                 <div className="text">
                     <motion.h1
                         initial={{ opacity: 0, y: 24 }}
@@ -64,7 +64,26 @@ const Landing = () => {
                         transition={{ delay: 1.3, duration: 0.75 }}
                     />
                 </div>
-            </div>
+            </section>
+            {/* ABOUT */}
+            <motion.section
+                className="about"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 2.25 }}>
+                <div className="text">
+                    <h2>Cuadros de lo que te gusta</h2>
+                    <p>Te ofrecemos cuadros de:</p>
+                    <ul>
+                        <li>Álbumes</li>
+                        <li>Canciones</li>
+                        <li>Películas</li>
+                        <li>Series</li>
+                    </ul>
+
+                    <strong></strong>
+                </div>
+            </motion.section>
         </main>
     );
 };
