@@ -12,6 +12,9 @@ import future_nostalgia from "../../assets/cuadros/future-nostalgia.webp";
 import pulp_fiction from "../../assets/cuadros/pulp-fiction.webp";
 import demondays from "../../assets/cuadros/demon-days.webp";
 
+import phone_picture from "../../assets/graphics/phone.webp";
+import { URL_INSTAGRAM } from "../../utils/constants";
+
 const Landing = () => {
     return (
         <main className="landing">
@@ -141,6 +144,25 @@ const Landing = () => {
                     </div>
                 </div>
             </motion.section>
+
+            <section className="extra">
+                <motion.img
+                    width="95%"
+                    src={phone_picture}
+                    alt="Celular mostrando una historia de instagram con un cuadro de vinylart"
+                />
+                <div className="text">
+                    <h2>Te van a gustar</h2>
+                    <p>
+                        Antes de imprimir tu cuadro, vamos a mostrate el diseño
+                        y cómo se va a ver. Una vez que estés satisfecho, vamos
+                        a preparar tu cuadro
+                    </p>
+                    <a href={URL_INSTAGRAM} className="btn pink long">
+                        Entrá a nuestro instagram
+                    </a>
+                </div>
+            </section>
         </main>
     );
 };
