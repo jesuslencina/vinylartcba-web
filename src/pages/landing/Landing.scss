@@ -73,7 +73,7 @@
         // HERO | DESKTOP
         @media screen and (min-width: vars.$breakpoint-desktop) {
             .text {
-                margin-top: 14rem;
+                margin-top: 12rem;
 
                 h1 {
                     font-size: 3.5rem;
@@ -103,5 +103,59 @@
         @include mixins.apply-padding;
         background-color: vars.$dark;
         color: white;
+        line-height: 2rem;
+
+        .btn,
+        ul {
+            margin: 1rem 0;
+        }
+
+        .carousel {
+            margin: 0 0 7vh 0;
+
+            .splide__pagination {
+                bottom: -2.5rem;
+            }
+
+            .centered {
+                display: flex;
+                justify-content: center;
+
+                img {
+                    width: 80%;
+                }
+            }
+        }
+
+        // ABOUT | TABLET
+        @media screen and (min-width: vars.$breakpoint-tablet) {
+            .btn {
+                margin: 4vh auto;
+            }
+        }
+
+        // ABOUT | DESKTOP
+        @media screen and (min-width: vars.$breakpoint-desktop) {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .container {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                align-items: center;
+                line-height: 3rem;
+
+                .carousel {
+                    width: 48vh;
+                }
+
+                .btn {
+                    margin: 2rem 0;
+                }
+            }
+        }
     }
 }

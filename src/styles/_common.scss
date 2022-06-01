@@ -4,4 +4,22 @@
     background-color: vars.$dark;
     color: white;
     padding: 0.5rem 2rem;
+    width: fit-content;
+    display: block;
+    text-decoration: none;
+
+    &.light {
+        background-color: white;
+        color: vars.$dark;
+    }
+
+    &.long {
+        width: 80%;
+        text-align: center;
+
+        @media screen and (min-width: vars.$breakpoint-desktop) {
+            width: fit-content;
+            text-align: unset;
+        }
+    }
 }

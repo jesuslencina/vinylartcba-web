@@ -1,10 +1,16 @@
 import "./Landing.scss";
 import { motion } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
+import { Link } from "react-router-dom";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
 
 import montero from "../../assets/cuadros/montero.webp";
 import happier from "../../assets/cuadros/happier.webp";
 import snowchild from "../../assets/cuadros/snowchild.webp";
+import future_nostalgia from "../../assets/cuadros/future-nostalgia.webp";
+import pulp_fiction from "../../assets/cuadros/pulp-fiction.webp";
+import demondays from "../../assets/cuadros/demon-days.webp";
 
 const Landing = () => {
     return (
@@ -71,17 +77,68 @@ const Landing = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 2.25 }}>
-                <div className="text">
-                    <h2>Cuadros de lo que te gusta</h2>
-                    <p>Te ofrecemos cuadros de:</p>
-                    <ul>
-                        <li>Álbumes</li>
-                        <li>Canciones</li>
-                        <li>Películas</li>
-                        <li>Series</li>
-                    </ul>
+                <h2>Cuadros de lo que te gusta</h2>
 
-                    <strong></strong>
+                <div className="container">
+                    <Splide
+                        aria-label="Carousel"
+                        className="carousel"
+                        options={{
+                            rewind: true,
+                            autoplay: true,
+                            lazyLoad: true,
+                            type: "loop",
+                            focus: "center",
+                            arrows: false,
+                            speed: 200,
+                        }}>
+                        <SplideSlide>
+                            <div className="centered">
+                                <img
+                                    width="100%"
+                                    src={future_nostalgia}
+                                    alt="Future Nostalgia de Dua Lipa"
+                                />
+                            </div>
+                        </SplideSlide>
+                        <SplideSlide>
+                            <div className="centered">
+                                <img
+                                    width="100%"
+                                    src={pulp_fiction}
+                                    alt="Pulp Fiction"
+                                />
+                            </div>
+                        </SplideSlide>
+
+                        <SplideSlide>
+                            <div className="centered">
+                                <img
+                                    width="100%"
+                                    src={demondays}
+                                    alt="Demon Days de Gorillaz"
+                                />
+                            </div>
+                        </SplideSlide>
+                    </Splide>
+
+                    <div className="text">
+                        <p>Te ofrecemos cuadros de:</p>
+                        <ul>
+                            <li>Álbumes</li>
+                            <li>Canciones</li>
+                            <li>Películas</li>
+                            <li>Series</li>
+                        </ul>
+
+                        <strong>
+                            Para cada uno, ofrecemos diferentes tamaños
+                        </strong>
+
+                        <Link to="todo" className="btn light long">
+                            Ver tamaños
+                        </Link>
+                    </div>
                 </div>
             </motion.section>
         </main>
