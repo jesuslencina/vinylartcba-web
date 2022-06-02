@@ -80,7 +80,7 @@ const Landing = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 2.25 }}>
-                <h2>Cuadros de lo que te gusta</h2>
+                <p className="heading">Cuadros de lo que te gusta</p>
 
                 <div className="container">
                     <Splide
@@ -152,7 +152,7 @@ const Landing = () => {
                     alt="Celular mostrando una historia de instagram con un cuadro de vinylart"
                 />
                 <div className="text">
-                    <h2>Te van a gustar</h2>
+                    <p className="heading">Te van a gustar</p>
                     <p>
                         Antes de imprimir tu cuadro, vamos a mostrate el diseño
                         y cómo se va a ver. Una vez que estés satisfecho, vamos
@@ -162,6 +162,14 @@ const Landing = () => {
                         Entrá a nuestro instagram
                     </a>
                 </div>
+            </section>
+            <section className="banner">
+                <p className="heading light bigger">
+                    ¿Listo para materializar lo que te gusta?
+                </p>
+                <a href={URL_INSTAGRAM} className="btn pink">
+                    Hablanos
+                </a>
             </section>
         </main>
     );

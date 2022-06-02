@@ -1,0 +1,17 @@
+@use "/src/styles/variables" as vars;
+
+footer {
+    text-align: center;
+    background-color: black;
+    color: vars.$light;
+    padding: 2vh 0;
+    font-size: 0.8rem;
+
+    p {
+        margin: 0;
+    }
+
+    @media screen and (min-width: vars.$breakpoint-tablet) {
+        font-size: 1.1rem;
+    }
+}
