@@ -13,6 +13,8 @@ import pulp_fiction from "../../assets/cuadros/pulp-fiction.webp";
 import demondays from "../../assets/cuadros/demon-days.webp";
 
 import phone_picture from "../../assets/graphics/phone.webp";
+import banner_bg from "../../assets/pictures/banner1.jpg";
+
 import { URL_INSTAGRAM } from "../../utils/constants";
 
 const Landing = () => {
@@ -163,7 +165,9 @@ const Landing = () => {
                     </a>
                 </div>
             </section>
-            <section className="banner">
+            <section
+                className="banner"
+                style={{ backgroundImage: `url(${banner_bg})` }}>
                 <p className="heading light bigger">
                     ¿Listo para materializar lo que te gusta?
                 </p>
