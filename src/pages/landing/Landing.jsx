@@ -1,5 +1,5 @@
 import "./Landing.scss";
-import { motion } from "framer-motion";
+import { motion, useTransform } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
 import { Link } from "react-router-dom";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
@@ -17,7 +17,17 @@ import banner_bg from "../../assets/pictures/banner1.jpg";
 
 import { URL_INSTAGRAM } from "../../utils/constants";
 
-const Landing = () => {
+const Landing = ({ scrollYProgress }) => {
+    const cuadrosParallaxValue = useTransform(
+        scrollYProgress,
+        (value) => value * 650
+    );
+
+    const phoneParallaxValue = useTransform(
+        scrollYProgress,
+        (value) => value * -175
+    );
+
     return (
         <main className="landing">
             {/* HERO */}
@@ -44,7 +54,9 @@ const Landing = () => {
                     </motion.div>
                 </div>
 
-                <div className="cuadros">
+                <motion.div
+                    className="cuadros"
+                    style={{ marginBottom: cuadrosParallaxValue }}>
                     <motion.img
                         width="200cm"
                         src={montero}
@@ -74,7 +86,7 @@ const Landing = () => {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 1.3, duration: 0.75 }}
                     />
-                </div>
+                </motion.div>
             </section>
             {/* ABOUT */}
             <motion.section
@@ -147,11 +159,17 @@ const Landing = () => {
                 </div>
             </motion.section>
 
-            <section className="extra">
+            {/* EXTRA */}
+            <motion.section
+                className="extra"
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.4, duration: 0.75 }}
+                style={{ opacity: 0 }}>
                 <motion.img
                     width="95%"
                     src={phone_picture}
                     alt="Celular mostrando una historia de instagram con un cuadro de vinylart"
+                    whileInView={{ translateY: cuadrosParallaxValue }}
                 />
                 <div className="text">
                     <p className="heading">Te van a gustar</p>
@@ -164,17 +182,19 @@ const Landing = () => {
                         Entrá a nuestro instagram
                     </a>
                 </div>
-            </section>
-            <section
+            </motion.section>
+            <motion.section
                 className="banner"
-                style={{ backgroundImage: `url(${banner_bg})` }}>
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.4, duration: 0.75 }}
+                style={{ opacity: 0, backgroundImage: `url(${banner_bg})` }}>
                 <p className="heading light bigger">
                     ¿Listo para materializar lo que te gusta?
                 </p>
                 <a href={URL_INSTAGRAM} className="btn pink">
                     Hablanos
                 </a>
-            </section>
+            </motion.section>
         </main>
     );
 };
