@@ -1,6 +1,6 @@
 import "./Navbar.scss";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import Img from "react-cool-img";
 
@@ -29,7 +29,7 @@ const Navbar = () => {
             initial="initial"
             animate="animate"
             transition={{ delay: 0.1, duration: 1.75 }}>
-            <div className="logo-container">
+            <Link className="logo-container" to="/">
                 <motion.img
                     src={logo}
                     alt="Logo vinylartcba"
@@ -47,7 +47,7 @@ const Navbar = () => {
                     transition={{ delay: 0.4, duration: 1.75 }}>
                     VINYLARTCBA
                 </motion.p>
-            </div>
+            </Link>
             <nav>
                 {/* MOBILE (BURGER MENU) */}
                 <motion.img
@@ -76,7 +76,9 @@ const Navbar = () => {
                                     delay: 0.15,
                                     duration: 0.25,
                                 }}>
-                                <NavLink to="/sobre-nosotros">
+                                <NavLink
+                                    to="/sobre-nosotros"
+                                    onClick={switchMenuStatus}>
                                     SOBRE NOSOTROS
                                 </NavLink>
                             </motion.li>
@@ -89,7 +91,11 @@ const Navbar = () => {
                                     delay: 0.3,
                                     duration: 0.25,
                                 }}>
-                                <NavLink to="/disenos">DISEÑOS</NavLink>
+                                <NavLink
+                                    to="/disenos"
+                                    onClick={switchMenuStatus}>
+                                    DISEÑOS
+                                </NavLink>
                             </motion.li>
                             <motion.li
                                 variants={navbarVariants}

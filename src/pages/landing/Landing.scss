@@ -13,6 +13,7 @@
         @include mixins.apply-padding;
         position: relative;
         height: 90vh;
+        z-index: -1;
 
         .text {
             margin-top: 25vh;

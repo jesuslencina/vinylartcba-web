@@ -23,10 +23,12 @@ const Landing = ({ scrollYProgress }) => {
         (value) => value * 650
     );
 
+    /*
     const phoneParallaxValue = useTransform(
         scrollYProgress,
         (value) => value * -175
     );
+    */
 
     return (
         <main className="landing">
@@ -50,7 +52,9 @@ const Landing = ({ scrollYProgress }) => {
                         initial={{ opacity: 0, y: 24 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5, duration: 0.5 }}>
-                        <ScrollLink className="btn">Conocenos</ScrollLink>
+                        <ScrollLink to="conocenos" className="btn">
+                            Conocenos
+                        </ScrollLink>
                     </motion.div>
                 </div>
 
