@@ -9,9 +9,7 @@ import burgerMenu from "./assets/burger-menu.webp";
 import closeMenu from "./assets/close-menu.webp";
 import { URL_INSTAGRAM } from "../../../utils/constants";
 
-const Navbar = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
-
+const Navbar = ({ menuOpen, setMenuOpen }) => {
     const switchMenuStatus = () => {
         setMenuOpen(!menuOpen);
     };

@@ -13,27 +13,20 @@ import pulp_fiction from "../../assets/cuadros/pulp-fiction.webp";
 import demondays from "../../assets/cuadros/demon-days.webp";
 
 import phone_picture from "../../assets/graphics/phone.webp";
-import banner_bg from "../../assets/pictures/banner1.jpg";
+import banner_bg from "../../assets/pictures/banner1.webp";
 
 import { URL_INSTAGRAM } from "../../utils/constants";
 
-const Landing = ({ scrollYProgress }) => {
+const Landing = ({ scrollYProgress, menuOpen }) => {
     const cuadrosParallaxValue = useTransform(
         scrollYProgress,
         (value) => value * 650
     );
 
-    /*
-    const phoneParallaxValue = useTransform(
-        scrollYProgress,
-        (value) => value * -175
-    );
-    */
-
     return (
         <main className="landing">
             {/* HERO */}
-            <section className="hero">
+            <motion.section className="hero" animate={{ y: menuOpen ? 40 : 0 }}>
                 <div className="text">
                     <motion.h1
                         initial={{ opacity: 0, y: 24 }}
@@ -91,7 +84,7 @@ const Landing = ({ scrollYProgress }) => {
                         transition={{ delay: 1.3, duration: 0.75 }}
                     />
                 </motion.div>
-            </section>
+            </motion.section>
             {/* ABOUT */}
             <motion.section
                 className="about"

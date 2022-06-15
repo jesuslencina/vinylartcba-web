@@ -1,0 +1,13 @@
+@use "/src/styles/variables" as vars;
+@use "/src/styles/mixins.scss" as mixins;
+
+.designs {
+    .showcase {
+        background-color: vars.$dark;
+        color: vars.$light;
+
+        h1 {
+            margin: 0;
+        }
+    }
+}

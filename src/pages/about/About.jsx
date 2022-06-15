@@ -2,18 +2,18 @@ import "./About.scss";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-import ig_icon from "../../assets/icons/ai_instagram.png";
-import about_picture from "../../assets/pictures/about-us.jpg";
-import juli_barbaroy from "../../assets/pictures/juli-barbaroy.jpg";
-import juan_banchio from "../../assets/pictures/juan-banchio.jpeg";
+import ig_icon from "../../assets/icons/ai_instagram.webp";
+import about_picture from "../../assets/pictures/about-us.webp";
+import juli_barbaroy from "../../assets/pictures/juli-barbaroy.webp";
+import juan_banchio from "../../assets/pictures/juan-banchio.webp";
 
-const About = () => {
+const About = ({ menuOpen }) => {
     return (
         <motion.main
             className="about"
             initial={{ y: "100vh" }}
-            animate={{ y: 0 }}
-            transition={{ delay: 0.45, duration: 0.5 }}>
+            animate={{ y: menuOpen ? 200 : 0 }}
+            transition={{ delay: 0.15, duration: 0.35 }}>
             <Link to="/" className="btn go-back">
                 {"<"} Volver al Inicio
             </Link>
