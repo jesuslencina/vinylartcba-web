@@ -5,9 +5,78 @@
     .showcase {
         background-color: vars.$dark;
         color: vars.$light;
+        padding-bottom: 7vh;
 
-        h1 {
+        .text {
+            text-align: center;
             margin: 0;
+            padding: 5vh 0 2.5vh;
+
+            p,
+            h1 {
+                margin: 0;
+            }
+        }
+
+        .container-desktop {
+            display: none;
+        }
+
+        /*CUADROS*/
+
+        .centered {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .m15x21 img {
+            width: calc(15cm / 4);
+        }
+
+        .m20x30 img {
+            width: calc(20cm / 4);
+        }
+
+        .m30x40 img {
+            width: calc(30cm / 4);
+        }
+
+        .m30x45 img {
+            width: calc(30cm / 4);
+        }
+
+        /* ---- */
+
+        .carousel {
+            height: 50vh;
+
+            .splide__pagination {
+                display: none;
+            }
+
+            .centered {
+                justify-content: start;
+                height: 100%;
+
+                strong {
+                    margin-top: 0.5rem;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        @media screen and (min-width: vars.$breakpoint-desktop) {
+            .container-mobile {
+                display: none;
+            }
+
+            .container-desktop {
+                margin: 6vh 0;
+                @include mixins.apply-padding;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+            }
         }
     }
 }
