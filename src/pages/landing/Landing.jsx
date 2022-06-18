@@ -13,9 +13,10 @@ import pulp_fiction from "../../assets/cuadros/pulp-fiction.webp";
 import demondays from "../../assets/cuadros/demon-days.webp";
 
 import phone_picture from "../../assets/graphics/phone.webp";
-import banner_bg from "../../assets/pictures/banner1.webp";
 
 import { URL_INSTAGRAM } from "../../utils/constants";
+
+import Banner from "../common-components/banner/Banner";
 
 const Landing = ({ scrollYProgress, menuOpen }) => {
     const cuadrosParallaxValue = useTransform(
@@ -180,18 +181,7 @@ const Landing = ({ scrollYProgress, menuOpen }) => {
                     </a>
                 </div>
             </motion.section>
-            <motion.section
-                className="banner"
-                whileInView={{ opacity: 1 }}
-                transition={{ delay: 0.4, duration: 0.75 }}
-                style={{ opacity: 0, backgroundImage: `url(${banner_bg})` }}>
-                <p className="heading light bigger">
-                    ¿Listo para materializar lo que te gusta?
-                </p>
-                <a href={URL_INSTAGRAM} className="btn pink">
-                    Hablanos
-                </a>
-            </motion.section>
+            <Banner />
         </main>
     );
 };

@@ -3,9 +3,9 @@
 
 .designs {
     .showcase {
-        background-color: vars.$dark;
-        color: vars.$light;
+        background-color: vars.$light;
         padding-bottom: 7vh;
+        background-size: 100%;
 
         .text {
             text-align: center;
@@ -67,6 +67,8 @@
         }
 
         @media screen and (min-width: vars.$breakpoint-desktop) {
+            background-size: 40%;
+
             .container-mobile {
                 display: none;
             }

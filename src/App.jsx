@@ -36,7 +36,10 @@ const App = () => {
                     }
                 />
 
-                <Route path="/disenos" element={<Designs />} />
+                <Route
+                    path="/disenos"
+                    element={<Designs menuOpen={menuOpen} />}
+                />
             </Switch>
             <Footer />
         </BrowserRouter>

@@ -3,15 +3,24 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import "./Designs.scss";
 
+import { URL_INSTAGRAM } from "../../utils/constants";
+import wall_texture from "../../assets/graphics/wall-texture.webp";
 import self_control from "../../assets/cuadros/self-control.webp";
 import apetite_for_destruction from "../../assets/cuadros/appetite-for-destruction.webp";
 import igor from "../../assets/cuadros/igor.webp";
 import el_madrileno from "../../assets/cuadros/el-madrileno.webp";
+import Banner from "../common-components/banner/Banner";
 
-const Designs = () => {
+const Designs = ({ menuOpen }) => {
     return (
-        <motion.main className="designs">
-            <section className="showcase">
+        <motion.main
+            className="designs"
+            initial={{ y: "100vh" }}
+            animate={{ y: menuOpen ? 200 : 0 }}
+            transition={{ delay: 0.15, duration: 0.35 }}>
+            <section
+                className="showcase"
+                style={{ backgroundImage: `url(${wall_texture})` }}>
                 <div className="text">
                     <h1 className="heading">Diseños</h1>
                     <p>En centímetros</p>
@@ -100,6 +109,7 @@ const Designs = () => {
                     </div>
                 </div>
             </section>
+            <Banner />
         </motion.main>
     );
 };

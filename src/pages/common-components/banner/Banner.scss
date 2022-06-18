@@ -1,0 +1,13 @@
+@use "/src/styles/mixins.scss" as mixins;
+
+.banner {
+    @include mixins.apply-padding;
+    text-align: center;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("img/banner1.webp");
+    background-size: cover;
+}

@@ -169,7 +169,7 @@
 
     .extra {
         @include mixins.apply-padding;
-
+        padding-bottom: 7vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -219,18 +219,5 @@
                 margin-right: 0;
             }
         }
-    }
-
-    .banner {
-        @include mixins.apply-padding;
-        text-align: center;
-        margin-top: 10vh;
-        height: 70vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-image: url("img/banner1.webp");
-        background-size: cover;
     }
 }
