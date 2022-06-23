@@ -3,7 +3,6 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import "./Designs.scss";
 
-import { URL_INSTAGRAM } from "../../utils/constants";
 import wall_texture from "../../assets/graphics/wall-texture.webp";
 import self_control from "../../assets/cuadros/self-control.webp";
 import apetite_for_destruction from "../../assets/cuadros/appetite-for-destruction.webp";

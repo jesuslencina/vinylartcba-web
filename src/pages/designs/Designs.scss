@@ -4,7 +4,8 @@
 .designs {
     .showcase {
         background-color: vars.$light;
-        padding-bottom: 7vh;
+        min-height: fit-content;
+        padding-bottom: 12.5vh;
         background-size: 100%;
 
         .text {
@@ -77,7 +78,8 @@
                 margin: 6vh 0;
                 @include mixins.apply-padding;
                 display: grid;
-                grid-template-columns: repeat(4, 1fr);
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15vh 0;
             }
         }
     }

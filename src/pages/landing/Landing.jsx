@@ -32,7 +32,8 @@ const Landing = ({ scrollYProgress, menuOpen }) => {
                     <motion.h1
                         initial={{ opacity: 0, y: 24 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.1, duration: 0.5 }}>
+                        transition={{ delay: 0.1, duration: 0.5 }}
+                        className="heading bigger">
                         De Spotify a tu pared
                     </motion.h1>
                     <motion.p
@@ -92,7 +93,7 @@ const Landing = ({ scrollYProgress, menuOpen }) => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 2.25 }}>
-                <p className="heading">Cuadros de lo que te gusta</p>
+                <p className="heading mobile">Cuadros de lo que te gusta</p>
 
                 <div className="container">
                     <Splide
@@ -138,13 +139,19 @@ const Landing = ({ scrollYProgress, menuOpen }) => {
                     </Splide>
 
                     <div className="text">
-                        <p>Te ofrecemos cuadros de:</p>
-                        <ul>
-                            <li>Álbumes</li>
-                            <li>Canciones</li>
-                            <li>Películas</li>
-                            <li>Series</li>
-                        </ul>
+                        <p className="heading desktop">
+                            Cuadros de lo que te gusta
+                        </p>
+
+                        <div>
+                            <p>Te ofrecemos cuadros de:</p>
+                            <ul>
+                                <li>Álbumes</li>
+                                <li>Canciones</li>
+                                <li>Películas</li>
+                                <li>Series</li>
+                            </ul>
+                        </div>
 
                         <strong>
                             Para cada uno, ofrecemos diferentes tamaños

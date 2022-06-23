@@ -6,6 +6,19 @@
 
 @import "./common";
 
+html {
+    font-size: 16px;
+
+    @media screen and (min-width: vars.$breakpoint-tablet) {
+        font-size: 18px;
+        line-height: 3rem;
+    }
+
+    @media screen and (min-width: vars.$breakpoint-big-screen) {
+        font-size: 1vw;
+    }
+}
+
 body {
     margin: 0;
     font-family: "Podkova", serif;
@@ -13,9 +26,4 @@ body {
     color: vars.$dark;
     min-height: 100vh;
     line-height: 2rem;
-
-    @media screen and (min-width: vars.$breakpoint-tablet) {
-        font-size: 1.5rem;
-        line-height: 3rem;
-    }
 }

@@ -15,7 +15,6 @@
 
         p {
             margin-left: 0.5rem;
-            font-size: 1.25rem;
         }
     }
 
@@ -46,12 +45,16 @@
         }
     }
 
+    @media screen and (min-width: vars.$breakpoint-tablet) {
+        line-height: 1rem;
+
+        .logo-container p {
+            margin: unset unset unset 1rem;
+        }
+    }
+
     @media screen and (min-width: vars.$breakpoint-desktop) {
         padding: 2vh calc(vars.$desktop-padding-x / 2);
-
-        p {
-            font-size: 1.5rem;
-        }
 
         .burger-menu {
             display: none;
@@ -69,7 +72,6 @@
                 a {
                     color: vars.$dark;
                     text-decoration: none;
-                    font-size: 1.25rem;
                     @include mixs.hoverable-link;
                 }
             }

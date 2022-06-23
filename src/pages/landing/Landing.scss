@@ -75,10 +75,6 @@
         @media screen and (min-width: vars.$breakpoint-desktop) {
             .text {
                 margin-top: 12rem;
-
-                h1 {
-                    font-size: 3.5rem;
-                }
             }
 
             .cuadros {
@@ -91,11 +87,16 @@
         // HERO | BIG SCREEN
         @media screen and (min-width: vars.$breakpoint-big-screen) {
             .text {
-                margin-top: 20rem;
+                margin-top: 35vh;
             }
 
             .cuadros {
-                transform: rotate(-35deg) scale(2.45);
+                transform: rotate(-35deg) scale(1);
+                bottom: -50vh;
+            }
+
+            .cuadro {
+                width: 18vw;
             }
         }
     }
@@ -105,6 +106,14 @@
         background-color: vars.$dark;
         color: white;
         padding-bottom: 22vh;
+
+        .heading.desktop {
+            display: none;
+        }
+
+        .heading.mobile {
+            text-align: center;
+        }
 
         ul {
             margin: 1rem 0;
@@ -150,11 +159,26 @@
                 margin-bottom: 0;
             }
 
+            .heading.mobile {
+                display: none;
+            }
+
+            .heading.desktop {
+                display: block;
+            }
+
             .container {
                 display: flex;
                 flex-direction: row-reverse;
                 justify-content: space-between;
                 align-items: center;
+
+                .text {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
 
                 .carousel {
                     width: 48vh;

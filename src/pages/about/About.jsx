@@ -10,15 +10,15 @@ import juan_banchio from "../../assets/pictures/juan-banchio.webp";
 const About = ({ menuOpen }) => {
     return (
         <motion.main
-            className="about"
+            className="about-page"
             initial={{ y: "100vh" }}
-            animate={{ y: menuOpen ? 200 : 0 }}
+            animate={{ y: menuOpen ? "25vh" : 0 }}
             transition={{ delay: 0.15, duration: 0.35 }}>
             <Link to="/" className="btn go-back">
                 {"<"} Volver al Inicio
             </Link>
             <section className="desc">
-                <h1 className="heading">Sobre nosotros</h1>
+                <h1 className="heading mobile">Sobre nosotros</h1>
                 <div className="container">
                     <img
                         src={about_picture}
@@ -26,14 +26,17 @@ const About = ({ menuOpen }) => {
                         width="100%"
                         height="265"
                     />
-                    <p>
-                        Nos apasiona la música y decidimos crear algo diferente
-                        y original para decorar nuestras y sus paredes. Somos
-                        amigos de la facultad y hace más de un año trabajamos
-                        juntos en este emprendimiento para llevar la música a
-                        las paredes a través de diseños únicos y
-                        personalizables.
-                    </p>
+                    <div className="text">
+                        <h1 className="heading desktop">Sobre nosotros</h1>
+                        <p>
+                            Nos apasiona la música y decidimos crear algo
+                            diferente y original para decorar nuestras y sus
+                            paredes. Somos amigos de la facultad y hace más de
+                            un año trabajamos juntos en este emprendimiento para
+                            llevar la música a las paredes a través de diseños
+                            únicos y personalizables.
+                        </p>
+                    </div>
                 </div>
             </section>
             <section className="members">
