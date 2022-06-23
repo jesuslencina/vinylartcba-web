@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
@@ -20,6 +21,9 @@ const Designs = ({ menuOpen }) => {
             <section
                 className="showcase"
                 style={{ backgroundImage: `url(${wall_texture})` }}>
+                <Link to="/" className="btn go-back">
+                    {"<"} Volver al Inicio
+                </Link>
                 <div className="text">
                     <h1 className="heading">Diseños</h1>
                     <p>En centímetros</p>

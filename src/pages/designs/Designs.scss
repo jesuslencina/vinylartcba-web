@@ -5,8 +5,13 @@
     .showcase {
         background-color: vars.$light;
         min-height: fit-content;
+        padding-top: 2.5vh;
         padding-bottom: 12.5vh;
         background-size: 100%;
+
+        .btn.go-back {
+            margin-left: vars.$mobile-padding-x;
+        }
 
         .text {
             text-align: center;
@@ -69,6 +74,10 @@
 
         @media screen and (min-width: vars.$breakpoint-desktop) {
             background-size: 40%;
+
+            .btn.go-back {
+                margin-left: vars.$desktop-padding-x;
+            }
 
             .container-mobile {
                 display: none;
