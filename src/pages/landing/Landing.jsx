@@ -17,6 +17,7 @@ import phone_picture from "../../assets/graphics/phone.webp";
 import { URL_INSTAGRAM } from "../../utils/constants";
 
 import Banner from "../common-components/banner/Banner";
+import { scrollToTop } from "react-scroll/modules/mixins/animate-scroll";
 
 const Landing = ({ scrollYProgress, menuOpen }) => {
     const cuadrosParallaxValue = useTransform(
@@ -47,7 +48,11 @@ const Landing = ({ scrollYProgress, menuOpen }) => {
                         initial={{ opacity: 0, y: 24 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5, duration: 0.5 }}>
-                        <ScrollLink to="conocenos" className="btn">
+                        <ScrollLink
+                            to="about"
+                            className="btn"
+                            duration={800}
+                            smooth>
                             Conocenos
                         </ScrollLink>
                     </motion.div>
@@ -157,7 +162,7 @@ const Landing = ({ scrollYProgress, menuOpen }) => {
                             Para cada uno, ofrecemos diferentes tamaños
                         </strong>
 
-                        <Link to="todo" className="btn light long">
+                        <Link to="disenos" className="btn light long">
                             Ver tamaños
                         </Link>
                     </div>

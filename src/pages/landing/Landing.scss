@@ -73,6 +73,8 @@
 
         // HERO | DESKTOP
         @media screen and (min-width: vars.$breakpoint-desktop) {
+            z-index: unset;
+
             .text {
                 margin-top: 12rem;
             }
@@ -149,7 +151,7 @@
 
         // ABOUT | DESKTOP
         @media screen and (min-width: vars.$breakpoint-desktop) {
-            height: 85vh;
+            height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
