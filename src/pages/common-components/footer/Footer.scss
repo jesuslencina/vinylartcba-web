@@ -5,10 +5,18 @@ footer {
     background-color: black;
     color: vars.$light;
     padding: 2vh 0;
-    font-size: 0.8rem;
+    font-size: 0.8rem !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     p {
         margin: 0;
+    }
+
+    .btn.light {
+        margin-top: 0.5rem;
+        padding: 0.05rem 1rem;
     }
 
     @media screen and (min-width: vars.$breakpoint-tablet) {
